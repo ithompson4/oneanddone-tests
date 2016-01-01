@@ -1,0 +1,298 @@
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+ WebDriverException
+__ ERROR at setup of TestTeamDetails.test_that_person_can_view_team_details ___
+
+request = <SubRequest 'selenium' for <Function 'test_that_person_can_view_team_d
+etails'>>
+capabilities = {'tags': ['oneanddone']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+..\..\..\one\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __
+init__
+    self.binary, timeout),
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\extension_connection.p
+y:49: in __init__
+    self.binary.launch_browser(self.profile)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68:
+in launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x030C
+8E70>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+ WebDriverException
+______ ERROR at setup of TestUserProfile.test_that_user_can_edit_profile ______
+
+request = <SubRequest 'selenium' for <Function 'test_that_user_can_edit_profile'
+>>
+capabilities = {'tags': ['oneanddone']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+..\..\..\one\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __
+init__
+    self.binary, timeout),
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\extension_connection.p
+y:49: in __init__
+    self.binary.launch_browser(self.profile)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68:
+in launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x0324
+EED0>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+ WebDriverException
+_____ ERROR at setup of TestUserProfile.test_that_user_can_delete_profile _____
+
+request = <SubRequest 'selenium' for <Function 'test_that_user_can_delete_profil
+e'>>
+capabilities = {'tags': ['oneanddone']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+..\..\..\one\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __
+init__
+    self.binary, timeout),
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\extension_connection.p
+y:49: in __init__
+    self.binary.launch_browser(self.profile)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68:
+in launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x0304
+F6F0>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+ WebDriverException
+_____ ERROR at setup of TestUserTasks.test_that_user_can_complete_a_task ______
+
+request = <SubRequest 'selenium' for <Function 'test_that_user_can_complete_a_ta
+sk'>>
+capabilities = {'tags': ['oneanddone']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+..\..\..\one\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __
+init__
+    self.binary, timeout),
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\extension_connection.p
+y:49: in __init__
+    self.binary.launch_browser(self.profile)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68:
+in launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x030C
+F450>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+ WebDriverException
+______ ERROR at setup of TestUserTasks.test_that_user_can_abandon_a_task ______
+
+request = <SubRequest 'selenium' for <Function 'test_that_user_can_abandon_a_tas
+k'>>
+capabilities = {'tags': ['oneanddone']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+..\..\..\one\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+..\..\..\one\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __
+init__
+    self.binary, timeout),
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\extension_connection.p
+y:49: in __init__
+    self.binary.launch_browser(self.profile)
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68:
+in launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x030C
+1490>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+..\..\..\one\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+ WebDriverException
+=========================== short test summary info ===========================
+ERROR tests/test_available_tasks.py::TestAvailableTasks::()::test_available_task
+s
+ERROR tests/test_homepage.py::TestHomePage::()::test_home_page
+ERROR tests/test_login.py::TestLogin::()::test_that_a_new_user_can_login
+ERROR tests/test_task_details.py::TestTaskDetails::()::test_that_person_can_view
+_task_details
+ERROR tests/test_team_details.py::TestTeamDetails::()::test_that_person_can_view
+_team_details
+ERROR tests/test_user_profile.py::TestUserProfile::()::test_that_user_can_edit_p
+rofile
+ERROR tests/test_user_profile.py::TestUserProfile::()::test_that_user_can_delete
+_profile
+ERROR tests/test_user_tasks.py::TestUserTasks::()::test_that_user_can_complete_a
+_task
+ERROR tests/test_user_tasks.py::TestUserTasks::()::test_that_user_can_abandon_a_
+task
+========================== 9 error in 551.83 seconds ==========================
